@@ -34,7 +34,6 @@ WS_URL = os.getenv('CRAFT_DEMO_SAC_WS_URL', '')
 
 GOOGLE_CLIENT_ID     = os.getenv('CRAFT_DEMO_SAC_GOOGLE_CLIENT_ID', '')
 GOOGLE_CLIENT_SECRET = os.getenv('CRAFT_DEMO_SAC_GOOGLE_CLIENT_SECRET', '')
-GOOGLE_API_KEY       = os.getenv('CRAFT_DEMO_SAC_GOOGLE_API_KEY', '')
 
 CRAFT_DEMO_SAC_USER    = os.getenv('CRAFT_DEMO_SAC_USER', '')
 CRAFT_DEMO_SAC_PROJECT = os.getenv('CRAFT_DEMO_SAC_PROJECT', '')
@@ -169,8 +168,7 @@ def update_data():
 		sim = stateVar.t_simulation,
 		email = stateVar.cred['id_token']['email'],
 		url = URL,
-		wsUrl = WS_URL,
-		googleApiKey = GOOGLE_API_KEY)
+		wsUrl = WS_URL)
 
 ### Google authentification
 @app.route('/auth')
