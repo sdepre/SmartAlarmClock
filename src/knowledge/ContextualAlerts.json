@@ -9,8 +9,6 @@
   },
   "transportationMode": "",
   "origin": "",
-  "actualFeed": 0,
-  "answer": "xxxx",
   "cred_google": {
     "invalid": true
   },
@@ -18,7 +16,6 @@
     "found": false
   },
   "init": true,
-  "name": "Marvin",
   "awake": false,
   "left": false,
   "eventTime": 0.0,
@@ -26,20 +23,11 @@
   "homeLocation": "4 Rue Lincoln, 75008 Paris, FRANCE",
   "workLocation": "8 Rue de la Michodiere, 75002 Paris, FRANCE",
   "emptyEvent": {
-    "status": "",
-    "kind": "",
     "end": {},
-    "created": "",
-    "iCalUID": "",
-    "reminders": {},
-    "htmlLink": "",
-    "sequence": 0,
-    "updated": "",
     "summary": "",
     "start": {},
     "location": "",
     "organizer": {},
-    "creator": "",
     "id": ""
   }
 }
