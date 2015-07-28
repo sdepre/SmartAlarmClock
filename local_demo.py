@@ -15,7 +15,6 @@ def userInput(config):
 	res['project_branch'] = raw_input("current working branch of your SAC project on GitHub (default = " + defaultValue(config, 'project_branch') + "): ")
 	res['google_client_id'] = raw_input("generated Google client id (default = " + defaultValue(config, 'google_client_id') + "): ")
 	res['google_client_secret'] = raw_input("generated Google client secret (default = " + defaultValue(config, 'google_client_secret') + "): ")
-	res['google_api_key'] = raw_input("generated Google API key (default = " + defaultValue(config, 'google_api_key') + "): ")
 	res['sac_app_id'] = raw_input("generated SAC app ID (default = " + defaultValue(config, 'sac_app_id') + "): ")
 	res['sac_app_secret'] = raw_input("generated SAC app secret (default = " + defaultValue(config, 'sac_app_secret') + "): ")
 	for k, v in res.items():
@@ -35,7 +34,7 @@ if len(invalid_properties) > 0:
 	print "invalid configuration: properties", invalid_properties, "must be set"
 	config = userInput(config)
 
-if 'user_name' and 'project_name' and 'project_branch' and 'google_client_id' and 'google_client_secret' and 'google_api_key' and 'sac_app_id' and 'sac_app_secret' in config:
+if 'user_name' and 'project_name' and 'project_branch' and 'google_client_id' and 'google_client_secret' and 'sac_app_id' and 'sac_app_secret' in config:
 	reply = str(raw_input('config file complete. do you wish to reset it? (y/n): ')).lower().strip()
 	if reply[0] == 'y':
 		config = userInput(config)
@@ -60,7 +59,6 @@ os.environ["CRAFT_DEMO_SAC_PROJECT"] = config['project_name']
 os.environ["CRAFT_DEMO_SAC_VERSION"] = config['project_branch']
 os.environ["CRAFT_DEMO_SAC_GOOGLE_CLIENT_ID"] = config['google_client_id']
 os.environ["CRAFT_DEMO_SAC_GOOGLE_CLIENT_SECRET"] = config['google_client_secret']
-os.environ["CRAFT_DEMO_SAC_GOOGLE_API_KEY"] = config['google_api_key']
 os.environ["CRAFT_DEMO_SAC_APP_ID"] = config['sac_app_id']
 os.environ["CRAFT_DEMO_SAC_APP_SECRET"] = config['sac_app_secret']
 os.environ["CRAFT_DEMO_SAC_PORT"] = '8080'
